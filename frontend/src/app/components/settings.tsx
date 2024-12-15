@@ -7,7 +7,7 @@ import { useMessageStore } from '../store/messages.store'
 export function Settings() {
   const [clothingForm, setClothingForm] = useState<{ files: File[]; gender: string; description: string }>({
     files: [],
-    gender: '',
+    gender: 'female',
     description: ''
   })
 
@@ -64,8 +64,8 @@ export function Settings() {
               setClothingForm({ ...clothingForm, gender: e.target.value })
             }}
           >
-            <option value={'woman'}>Woman</option>
-            <option value={'man'}>Man</option>
+            <option value={'female'}>Female</option>
+            <option value={'male'}>Male</option>
             <option value={'non-binanry'}>Non-binary</option>
           </select>
         </label>
